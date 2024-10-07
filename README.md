@@ -1,6 +1,6 @@
 ## Leo Chen Mini 5
 
-
+[![CI](https://github.com/nogibjj/Leo_Chen_Mini_5/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Leo_Chen_Mini_5/actions/workflows/cicd.yml)
 
 ### File Structure
 ```
