@@ -1,42 +1,59 @@
-## SQLite Lab
-
-![4 17-etl-sqlite-RAW](https://github.com/nogibjj/sqlite-lab/assets/58792/b39b21b4-ccb4-4cc4-b262-7db34492c16d)
+## Leo Chen Mini 5
 
 
 
-### Lab:
+### File Structure
+```
+Leo_Chen_Mini_5/
+├── .devcontainer/
+│   ├── devcontainer.json
+│   └── Dockerfile
+├── .github/
+│   └── workflows/cicd.yml
+├── .gitignore
+├── run.png
+├── data/
+│   └── US_births.csv
+├── Dockerfile
+├── LICENSE
+├── main.py
+├── Makefile
+├── mylib/
+│   ├── extract.py
+│   ├── query.py
+│   └── transform_load.py
+├── README.md
+├── requirements.txt
+├── US_births_DB.db
+├── setup.sh
+└── test_lib.py
+```
 
-* Use an AI Assistant, but use a different one then you used from a previous lab (Anthropic's Claud, Bard, Copilot, CodeWhisperer, Colab AI, etc)
-* ETL-Query:  [E] Extract a dataset from URL, [T] Transform, [L] Load into SQLite Database and [Q] Query
-For the ETL-Query lab:
-* [E] Extract a dataset from a URL like Kaggle or data.gov. JSON or CSV formats tend to work well.
-* [T] Transform the data by cleaning, filtering, enriching, etc to get it ready for analysis.
-* [L] Load the transformed data into a SQLite database table using Python's sqlite3 module.
-* [Q] Write and execute SQL queries on the SQLite database to analyze and retrieve insights from the data.
+## Purpose
+The goal of this project is to build an ETL-Query pipeline. I used one of FiveThirtyEight's public datasets, extracted it into a local CSV file, loaded it into a .db file, and queried it using SQLite.
 
-#### Tasks:
+## Data Source
+U.S. births data for the years 2000 to 2014, as provided by the Social Security Administration
 
-* Fork this project and get it to run
-* Make the query more useful and not a giant mess that prints to screen
-* Convert the main.py into a command-line tool that lets you run each step independantly
-* Fork this project and do the same thing for a new dataset you choose
-* Make sure your project passes lint/tests and has a built badge
-* Include an architectural diagram showing how the project works
+Header | Definition
+---|---------
+`year` | Year
+`month` | Month
+`date_of_month` | Day number of the month
+`day_of_week` | Day of week, where 1 is Monday and 7 is Sunday
+`births` | Number of births
 
-#### Reflection Questions
+[Link to data source](https://github.com/fivethirtyeight/data/blob/master/births/US_births_2000-2014_SSA.csv)
 
-* What challenges did you face when extracting, transforming, and loading the data? How did you overcome them?
-* What insights or new knowledge did you gain from querying the SQLite database?
-* How can SQLite and SQL help make data analysis more efficient? What are the limitations?
-* What AI assistant did you use and how did it compare to others you've tried? What are its strengths and weaknesses?
-* If you could enhance this lab, what would you add or change? What other data would be interesting to load and query?
+## CRUD Operations
+Operations can be found [here](https://github.com/nogibjj/Leo_Chen_Mini_5/blob/main/mylib/query.py)
+1. Create: `create a new record: 2024, 10, 5, 6, 7785`
+2. Read: `read all data`
+3. Update: `update record 55: births = 7899`
+4. Delete: `delete record 420`
 
-##### Challenge Exercises
+## Example Run
+![example run](run.png)
 
-* Add more transformations to the data before loading it into SQLite. Ideas: join with another dataset, aggregate by categories, normalize columns.
-* Write a query to find correlated fields in the data. Print the query results nicely formatted.
-* Create a second table in the SQLite database and write a join query with the two tables.
-* Build a simple Flask web app that runs queries on demand and displays results.
-* Containerize the application using Docker so the database and queries can be portable
-
-
+## References
+https://github.com/nogibjj/sqlite-lab
