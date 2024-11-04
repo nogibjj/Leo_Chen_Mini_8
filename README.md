@@ -4,7 +4,7 @@
 [![Rust](https://github.com/nogibjj/Leo_Chen_Individual_2/actions/workflows/rust.yml/badge.svg)](https://github.com/nogibjj/Leo_Chen_Individual_2/actions/workflows/rust.yml)
 
 ## Purpose
-The goal of this project is to build an ETL-Query pipeline. I used one of FiveThirtyEight's public datasets, extracted it into a local CSV file, loaded it into a .db file, and queried it. Both *Python* and *Rust* were used in the query phase (doing the same tasks) to show the improvements in speed and resource usage provided by *Rust*.
+The goal of this project is to build an ETL-Query pipeline. I used one of FiveThirtyEight's public datasets, extracted it into a local CSV file, loaded it into a .db file, and queried it. Both `Python` and `Rust` were used in the query phase (doing the same tasks) to show the improvements in speed and resource usage provided by `Rust`.
 
 ## Data Source
 U.S. births data for the years 2000 to 2014, as provided by the Social Security Administration
@@ -27,4 +27,4 @@ Operations can be found [here](https://github.com/nogibjj/Leo_Chen_Individual_2/
 4. Delete: `delete record 420`
 
 ## Performance Comparison Report
-A performance comparison report has been produced to show the improvements in speed and resource usage provided by *Rust*. Access the report [here](https://github.com/nogibjj/Leo_Chen_Individual_2/blob/main/report.md).
+A performance comparison report has been produced to show the improvements in speed and resource usage provided by `Rust`. Access the report [here](https://github.com/nogibjj/Leo_Chen_Individual_2/blob/main/report.md).
