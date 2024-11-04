@@ -1,7 +1,3 @@
-"""
-Test goes here
-"""
-
 from mylib.query import query
 
 
